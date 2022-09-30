@@ -1,23 +1,27 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class Main {
+
 	public static void main(String[] args) throws IOException {
-		int a, b;
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		String s = "";
-		while((s = br.readLine()) != null) {
-			StringTokenizer st;
-			st = new StringTokenizer(s);
+		String str;
+		StringTokenizer st;
+		int a, b;
+				
+		while ((str = br.readLine()) != null) {
+			st = new StringTokenizer(str, " ");
+			
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
-			bw.write(a+b+"\n");
-		}
-		bw.close();
+			
+			bw.write((a+b)+"\n");
+			}
+		
+			// bw.flush();
+			bw.close();
 	}
+
 }
