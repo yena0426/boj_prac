@@ -10,8 +10,7 @@ public class Main {
 		int[] nums = new int[10001];
 		
 		for (int i = 0; i < N; i++) {
-			int tmp = Integer.parseInt(br.readLine());
-			nums[tmp]++;
+			nums[Integer.parseInt(br.readLine())]++;
 		}
 		
 		for (int i = 1; i <= 10000; i++) {
